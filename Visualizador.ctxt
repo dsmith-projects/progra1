@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=msj
+comment0.target=void\ muestre(java.lang.String)
+comment0.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment1.params=titulo\ msj
+comment1.target=void\ muestreError(java.lang.String,\ java.lang.String)
+comment2.params=msj
+comment2.target=int\ leaEntero(java.lang.String)
+comment3.params=msj
+comment3.target=java.lang.String\ leaHilera(java.lang.String)
+numComments=4

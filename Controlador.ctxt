@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Controlador()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Controlador1\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment2.params=
+comment2.target=void\ leaArchivos()
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment3.params=y
+comment3.target=void\ muestreDatosLeidosDeArchivo(int)
+comment3.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment4.params=y
+comment4.target=void\ creeArchivoResultados(int)
+comment4.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\n
+numComments=5
