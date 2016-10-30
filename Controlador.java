@@ -12,12 +12,20 @@ import javax.swing.*;
  */
 public class Controlador implements Serializable{
     static Visualizador v;
+    static Modelo m;
+    static String listaInstituciones;
+    static String path;
+    static ArrayList<String> paths = new ArrayList<String>();
+    static ArrayList<String> lineas = new ArrayList<String>();
+    static ArrayList<File> files = new ArrayList<File>(); 
     
     /**
      * Constructor for objects of class Controlador1
      */
     public Controlador(){
         v = new Visualizador(); // inicializa una instancia del visualizador
+        m = new Modelo();
+        listaInstituciones = "";
     }
 
     /**
@@ -34,7 +42,7 @@ public class Controlador implements Serializable{
         
         do{
             c.leaArchivos();
-            
+
             try{
                 opcion = v.leaEntero("Si desea leer otro archivo digite un 1");
             }catch(NumberFormatException e){
@@ -55,8 +63,8 @@ public class Controlador implements Serializable{
     public void leaArchivos(){
         
         int resultadoVentana ;
-        String datosArch = "";
-        String linea = "";           
+        boolean archivoLeido = false;
+        
         //v.muestreError("¡check point!", "llega acá ");
         
         JFileChooser fc = new JFileChooser(); // instanciamos a File Chooser.        
@@ -74,27 +82,26 @@ public class Controlador implements Serializable{
         
         // Opción 2, el usuario selecciona un archivo
         File fn = fc.getSelectedFile();
+        archivoLeido = m.proceseArchivo(fn);
         
-        if(fn == null || fn.getName().equals("")){
-            v.muestreError("¡Error!", "Se ha producido un error. El nombre de archivo es inválido, no existe o está corrupto");
-        }else{ // Opción 3, el archivo existe y se puede manipular
-            try{
-                FileReader fr = new FileReader(fn); // toma el nombre del archivo y lo convierte a algo que el Buffer Reader puede procesar
-                BufferedReader in = new BufferedReader(fr); // hace una instancia de Buffered Reader que recibe los datos del archivo
-                
-                while(linea != null){
-                    linea = in.readLine();
-                    datosArch += linea;
-                }
-                v.muestre("Datos del archivo: " + datosArch);
-            }catch(IOException e){
-                v.muestreError("Se ha producido un error. El nombre de archivo es inválido, no existe o está corrupto","¡Error!");
-            }
+        if(archivoLeido){
+            v.muestre("Archivo leído correctamente");
+        }else{
+            v.muestreError("Se ha producido un error. El nombre de archivo es inválido, no existe o está corrupto","¡Error!");
         }
-
-            
         
     }
+    
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y
+     */
+    public String leaEncabezado(){
+        return lineas.get(0);        
+    }
+
     
     /**
      * An example of a method - replace this comment with your own
@@ -125,6 +132,10 @@ public class Controlador implements Serializable{
     public void creeArchivoResultados(int y){
         // put your code here
         
+    }
+    
+    public void setPath(String path){
+        this.path = path;
     }
 
 
